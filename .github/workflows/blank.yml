@@ -35,8 +35,8 @@ jobs:
         run: |
           LATEST_PRE_RELEASE_VERSION=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases | jq -r '.[] | select(.prerelease == true) | .tag_name' | head -n 1)
           echo "Latest pre-release sing-box version: $LATEST_PRE_RELEASE_VERSION"
-          wget https://github.com/SagerNet/sing-box/releases/download/${LATEST_VERSION}/sing-box-${LATEST_VERSION#v}-linux-amd64.tar.gz
-          tar -xzvf sing-box-${LATEST_VERSION#v}-linux-amd64.tar.gz
+          wget https://github.com/SagerNet/sing-box/releases/download/${LATEST_PRE_RELEASE_VERSION}/sing-box-${LATEST_PRE_RELEASE_VERSION#v}-linux-amd64.tar.gz
+          tar -xzvf sing-box-${LATEST_PRE_RELEASE_VERSION}-linux-amd64.tar.gz
           sudo mv sing-box-${LATEST_VERSION#v}-linux-amd64/sing-box /usr/local/bin/
           sing-box version
 
