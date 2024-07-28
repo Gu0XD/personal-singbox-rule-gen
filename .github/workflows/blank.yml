@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Get ADGuard_DNS_Filter 
         run: |
-          wget -O adguard-dns-filter.txt https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+          wget -O adguard-dns-filter.txt https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
           echo "ADGuard DNS Filter downloaded."
 
       - name: Setup sing-box
