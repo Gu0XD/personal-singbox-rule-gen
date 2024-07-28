@@ -33,7 +33,7 @@ jobs:
 
       - name: Setup sing-box
         run: |
-          LATEST_PRE_RELEASE_VERSION=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases | grep -B3 '"prerelease": true' | grep '"tag_name":' | head -n 1 | sed -E 's/.*"([^"]+)".*/\1/')
+          LATEST_PRE_RELEASE_VERSION=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
           echo "Latest sing-box pre-release version: $LATEST_PRE_RELEASE_VERSION"
           wget https://github.com/SagerNet/sing-box/releases/download/${LATEST_PRE_RELEASE_VERSION}/sing-box-${LATEST_PRE_RELEASE_VERSION#v}-linux-amd64.tar.gz
           tar -xzvf sing-box-${LATEST_PRE_RELEASE_VERSION#v}-linux-amd64.tar.gz
