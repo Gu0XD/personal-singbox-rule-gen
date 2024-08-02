@@ -6,7 +6,7 @@ name: Ad_Rule-Gen
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 22 * * *" # 6:30 AM UTC+8
+    - cron: "30 22 * * 1" # 每周一 6:30 AM UTC+8
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
