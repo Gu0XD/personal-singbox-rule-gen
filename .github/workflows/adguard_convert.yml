@@ -32,8 +32,8 @@ jobs:
       - name: Update JSON version & change *
         run: |
           sed -i 's/"version": 1,/"version": 2,/' ad.json
-          sed -i 's/\*/[a-zA-Z0-9-]+/g' adguard-dns-filter.txt
-          sed -i 's/\*/[a-zA-Z0-9-]+/g' ad.json
+          sed -i 's/\*\./[a-zA-Z0-9-]+\./g' adguard-dns-filter.txt
+          sed -i 's/\*\./[a-zA-Z0-9-]+\./g' ad.json
           head -n 15 ad.json
           
       - name: Setup sing-box
