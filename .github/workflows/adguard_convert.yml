@@ -32,7 +32,7 @@ jobs:
       - name: Update JSON version
         run: |
           sed -i 's/"version": 1,/"version": 2,/' ad.json
-          head -n 5 ad.json
+          head -n 15 ad.json
           
       - name: Setup sing-box
         run: |
