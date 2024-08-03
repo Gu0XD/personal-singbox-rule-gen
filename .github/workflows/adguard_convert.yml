@@ -26,7 +26,7 @@ jobs:
         run: |
           wget -O adguard-dns-filter.txt https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
           echo "ADGuard DNS Filter downloaded."
-          wget -O ad.json https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.json
+          wget -O ad.json https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json
           echo "AWAvenue-Ads-Rule downloaded."
           
       - name: Update JSON version & change *
