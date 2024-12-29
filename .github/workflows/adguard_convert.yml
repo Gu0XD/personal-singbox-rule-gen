@@ -27,7 +27,7 @@ jobs:
           echo "ADGuard DNS Filter downloaded."
           wget -O ad.json https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json
           echo "AWAvenue-Ads-Rule downloaded."
-          wget -O ban.txt https://github.com/susetao/PCDNFilter-CHN-/blob/main/DNSBlock.txt
+          wget -O ban.txt https://github.com/susetao/PCDNFilter-CHN-/raw/main/DNSBlock.txt
           echo "Block-pcdn-domains rules downloaded."
           wget -O PCDNFilter.txt https://github.com/susetao/PCDNFilter-CHN-/raw/main/PCDNFilter.txt
           echo "PCDNFilter rules downloaded."
