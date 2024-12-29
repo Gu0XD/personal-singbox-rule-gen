@@ -8,7 +8,6 @@ on:
   schedule:
     - cron: "30 22 * * 1" # 每周一 6:30 AM UTC+8
 
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -22,20 +21,22 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: Get ADGuard_DNS_Filter & AWAvenue-Ads-Rule
+      - name: Get ADGuard_DNS_Filter, AWAvenue-Ads-Rule, and Additional Rules
         run: |
           wget -O adguard-dns-filter.txt https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
           echo "ADGuard DNS Filter downloaded."
           wget -O ad.json https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Singbox.json
           echo "AWAvenue-Ads-Rule downloaded."
-          
+          wget -O ban.txt https://github.com/thhbdd/Block-pcdn-domains/raw/main/ban.txt
+          echo "Block-pcdn-domains rules downloaded."
+          wget -O PCDNFilter.txt https://github.com/susetao/PCDNFilter-CHN-/raw/main/PCDNFilter.txt
+          echo "PCDNFilter rules downloaded."
+
       - name: Update JSON version & change *
         run: |
           sed -i 's/"version": 1,/"version": 2,/' ad.json
           head -n 15 ad.json
-        # sed -i 's/\*\./[a-zA-Z0-9-]+\./g' adguard-dns-filter.txt
-        # sed -i 's/\*\./[a-zA-Z0-9-]+\./g' ad.json
-          
+
       - name: Setup sing-box
         run: |
           LATEST_PRE_RELEASE_VERSION=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases | jq -r '.[] | select(.prerelease == true) | .tag_name' | head -n 1)
@@ -45,13 +46,17 @@ jobs:
           sudo mv sing-box-${LATEST_PRE_RELEASE_VERSION#v}-linux-amd64/sing-box /usr/local/bin/
           sing-box version
 
-      - name: Convert ADGuard DNS Filter to sing-box Rule Set
+      - name: Convert ADGuard DNS Filters to sing-box Rule Sets
         run: |
           sing-box rule-set convert --type adguard --output adguard-dns-filter.srs adguard-dns-filter.txt
           echo "ADGuard DNS Filter converted to sing-box rule set."
           sing-box rule-set compile --output ad.srs ad.json
           echo "AWAvenue-Ads-Rule converted to sing-box rule set."
-          
+          sing-box rule-set convert --type adguard --output ban.srs ban.txt
+          echo "Block-pcdn-domains rules converted to sing-box rule set."
+          sing-box rule-set convert --type adguard --output PCDNFilter.srs PCDNFilter.txt
+          echo "PCDNFilter rules converted to sing-box rule set."
+
       # Commit and push changes to repository
       - name: Commit and Push Changes
         run: |
@@ -59,9 +64,11 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git pull
           git add $GITHUB_WORKSPACE/adguard-dns-filter.srs
-          git add $GITHUB_WORKSPACE/ad.srs 
-          git add adguard-dns-filter.txt ad.json
-          git commit -m "rule updated"
+          git add $GITHUB_WORKSPACE/ad.srs
+          git add $GITHUB_WORKSPACE/ban.srs
+          git add $GITHUB_WORKSPACE/PCDNFilter.srs
+          git add adguard-dns-filter.txt ad.json ban.txt PCDNFilter.txt
+          git commit -m "Rules updated"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
