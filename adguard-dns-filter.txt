@@ -1,16 +1,16 @@
 !Title: AWAvenue Ads Rule
 !--------------------------------------
-!Total lines: 700
-!Version: 1.5.9-release
-!Update time: 2025-04-02 09:29:30 UTC+8
-!Update content: remove oauth-login-drcn.platform.dbankcloud.com fix #127
+!Total lines: 736
+!Version: 1.6.0-release
+!Update time: 2025-04-14 18:01:09 UTC+8
+!Update content: remove stats.qiumibao.com
 
 !Homepage: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 !License: https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE
 
 
-||1010pic.com^
 ||1500020991.vodplayer.wxamedia.com^
+||1500022744.vodplayer.wxamedia.com^
 ||1500026601.vodplayer.wxamedia.com^
 ||8le8le.com^
 ||a0.app.xiaomi.com^
@@ -53,6 +53,8 @@
 ||adcolony.com^
 ||addata.jd.com^
 ||adeng.hpplay.cn^
+||adexp.chinaliftoff.io^
+||adexp.liftoff.io^
 ||adexpo.tencentmusic.com^
 ||adfilter.imtt.qq.com^
 ||adfstat.yandex.ru^
@@ -121,6 +123,7 @@
 ||adtago.s3.amazonaws.com^
 ||adtech.yahooinc.com^
 ||adtrack.quark.cn^
+||adv.fjtv.net^
 ||adv.sec.intl.miui.com^
 ||adv.sec.miui.com^
 ||advertising-api-eu.amazon.com^
@@ -145,6 +148,7 @@
 ||afs.googlesyndication.com^
 ||aiseet.aa.atianqi.com^
 ||ali-ad.a.yximgs.com^
+||ali-p2p-v2.pull.yximgs.com^
 ||alog.umeng.com^
 ||alogus.umeng.com^
 ||als.baidu.com^
@@ -237,15 +241,20 @@
 ||cdn-ads.oss-cn-shanghai.aliyuncs.com^
 ||cdn-plugin-sync-upgrade-juui.hismarttv.com^
 ||cdn.aiclk.com^
+||cdn.chinaliftoff-creatives.io^
 ||cdn.hpplay.com.cn^
+||cdn.liftoff-creatives.io^
 ||cdn.ynuf.aliapp.org^
 ||cfg.imtt.qq.com^
 ||chat1.jd.com^
 ||chiq-cloud.com^
 ||cj.qidian.com^
 ||ck.ads.oppomobile.com^
+||click.chinaliftoff.io^
 ||click.googleanalytics.com^
+||click.liftoff.io^
 ||click.oneplus.cn^
+||click4.chinaliftoff.io^
 ||clog.miguvideo.com^
 ||cn-api.anythinktech.com^
 ||cnlogs.umeng.com^
@@ -258,7 +267,6 @@
 ||config.unityads.unity3d.com^
 ||cpc-service-square.aiclk.com^
 ||cpro.baidustatic.com^
-||crashlytics.com^
 ||crashlyticsreports-pa.googleapis.com^
 ||csjplatform.com^
 ||cws-cctv.conviva.com^
@@ -284,6 +292,8 @@
 ||dsp.fcbox.com^
 ||dualstack-logs.amap.com^
 ||dxp.baidu.com^
+||dyp2p-ali.douyucdn.cn^
+||dyp2p-hw.douyucdn.cn^
 ||e.ad.xiaomi.com^
 ||eclick.baidu.com^
 ||edge.ads.twitch.tv^
@@ -301,6 +311,7 @@
 ||firebaselogging-pa.googleapis.com^
 ||flurry.com^
 ||frontend-perf-service.e.kuaishou.com^
+||fundingchoicesmessages.google.com^
 ||fxgate.baidu.com^
 ||g.dtv.cn.miaozhen.com^
 ||g2.ganjing.world^
@@ -314,6 +325,7 @@
 ||ggx01.miguvideo.com^
 ||ggx03.miguvideo.com^
 ||google-analytics.com^
+||googleads.g.doubleclick-cn.net^
 ||googleads.g.doubleclick.net^
 ||googleadservices-cn.com^
 ||googleadservices.com^
@@ -331,6 +343,7 @@
 ||heads-ak.spotify.com.edgesuite.net^
 ||heads-fa.spotify.com^
 ||hexagon-analytics.com^
+||hismarttv.com^
 ||hm.baidu.com^
 ||hmma.baidu.com^
 ||hotupgrade.hpplay.cn^
@@ -341,6 +354,8 @@
 ||hugelog.fcbox.com^
 ||huichuan.sm.cn^
 ||hw-ot-ad.a.yximgs.com^
+||hw-p2p-pull.video-voip.com^
+||hw-p2p.pull.yximgs.com^
 ||hwpub-s01-drcn.cloud.dbankcloud.cn^
 ||hybrid.miniapp.taobao.com^
 ||hye.comp.360os.com^
@@ -360,6 +375,8 @@
 ||img-c.heytapimage.com^
 ||img-x.jd.com^
 ||img.adnyg.com.w.kunlungr.com^
+||impression-asia.chinaliftoff.io^
+||impression-asia.liftoff.io^
 ||in.treasuredata.com^
 ||iot-eu-logser.realme.com^
 ||iot-logser.realme.com^
@@ -378,18 +395,22 @@
 ||kl.67it.com^
 ||klink.volceapplog.com^
 ||knicks.jd.com^
+||ks-p2p-v2.pull.yximgs.com^
+||ks-p2p.pull.yximgs.com^
 ||ks.ferlytc.com^
 ||ks.pull.yximgs.com^
 ||launcher.smart-tv.cn^
 ||launcherimg.smart-tv.cn^
 ||lf3-ad-union-sdk.pglstatp-toutiao.com^
 ||lf6-ad-union-sdk.pglstatp-toutiao.com^
+||lh3.googleadsserving.cn^
 ||litchiads.com^
 ||liveats-vod.video.ptqy.gitv.tv^
 ||livemonitor.huan.tv^
 ||livep.l.aiseet.atianqi.com^
 ||lives.l.aiseet.atianqi.com^
 ||lives.l.ott.video.qq.com^
+||livewebbs2pcdn.msstatic.com^
 ||lm10111.jtrincc.cn^
 ||log-api-mn.huxiu.com^
 ||log-api.huxiu.com^
@@ -443,6 +464,7 @@
 ||mi.gdt.qq.com^
 ||miav-cse.avlyun.com^
 ||mime.baidu.com^
+||mini-prog-drm.vodplayvideo.net^
 ||mission-pub.smart-tv.cn^
 ||miui-fxcse.avlyun.com^
 ||mmgame.qpic.cn^
@@ -469,6 +491,7 @@
 ||nsclick.baidu.com^
 ||o2o.api.xiaomi.com^
 ||offerwall.yandex.net^
+||ogads-pa.clients6.google.com^
 ||omgmta.play.aiseet.atianqi.com^
 ||open.e.kuaishou.cn^
 ||open.e.kuaishou.com^
@@ -486,12 +509,17 @@
 ||p.s.360.cn^
 ||p1-lm.adkwai.com^
 ||p2-lm.adkwai.com^
+||p2pchunk-table.douyucdn.cn^
+||p2plive-ali.douyucdn.cn^
+||p2pupdate.gamedl.qq.com^
+||p2pupgrade.gamedl.qq.com^
 ||p3-be-pack-sign.pglstatp-toutiao.com^
 ||p3-lm.adkwai.com^
 ||p3-tt.byteimg.com^
 ||p6-be-pack-sign.pglstatp-toutiao.com^
 ||pagead2.googleadservices.com^
 ||pagead2.googlesyndication.com^
+||pcdn.xmcdn.com^
 ||pcm-img.zhls.qq.com^
 ||pgdt.gtimg.cn^
 ||pgdt.ugdtimg.com^
@@ -506,6 +534,7 @@
 ||proxy.advp.apple.com^
 ||public.gdtimg.com^
 ||q.i.gdt.qq.com^
+||qn-cdnfile1pcdn.msstatic.com^
 ||qqdata.ab.qq.com^
 ||qzs.gdtimg.com^
 ||recommend-drcn.hms.dbankcloud.cn^
@@ -525,6 +554,7 @@
 ||samsung-com.112.2o7.net^
 ||samsungads.com^
 ||sanme2.taisantech.com^
+||saxysec.com^
 ||scdown.qq.com^
 ||scs.openspeech.cn^
 ||sdk-ab-config.qquanquan.com^
@@ -569,10 +599,10 @@
 ||stat.y.qq.com^
 ||static.ads-twitter.com^
 ||statics.woozooo.com^
-||stats.qiumibao.com^
 ||stats.wp.com^
 ||statsigapi.net^
 ||stg-data.ads.heytapmobi.com^
+||stun.hitv.com^
 ||success.ctobsnssdk.com^
 ||syh-imp.cdnjtzy.com^
 ||szbdyd.com^
@@ -606,6 +636,9 @@
 ||tnc3-bjlgy.toutiaoapi.com^
 ||tnc3-bjlgy.zijieapi.com^
 ||toblog.ctobsnssdk.com^
+||tpa-hcdn.iqiyi.com^
+||tpc.googlesyndication-cn.com^
+||tpc.googlesyndication.com^
 ||trace.qq.com^
 ||tracelog-debug.aiclk.com^
 ||tracelog-debug.qquanquan.com^
@@ -615,17 +648,19 @@
 ||tracker.gitee.com^
 ||tracking.miui.com^
 ||tracking.rus.miui.com^
-||tsvrv.com^
 ||tvapp.hpplay.cn^
 ||tvuser-ch.cedock.com^
 ||tx-ad.a.yximgs.com^
 ||tx-kmpaudio.pull.yximgs.com^
+||tx-p2p-pull.live-voip.com^
+||tx-p2p-v2.pull.yximgs.com^
 ||tytx.m.cn.miaozhen.com^
 ||tz.sec.xiaomi.com^
 ||uapi.ads.heytapmobi.com^
 ||udc.yahoo.com^
 ||udcm.yahoo.com^
 ||uedas.qidian.com^
+||uhabo.com^
 ||ulog-sdk.gifshow.com^
 ||ulogjs.gifshow.com^
 ||ulogs.umeng.com^
@@ -691,6 +726,7 @@
 ||xlog.jd.com^
 ||xlviiirdr.com^
 ||xlviirdr.com^
+||xycdn.com^
 ||yk-ssp.ad.youku.com^
 ||ykad-data.youku.com^
 ||ykad-gateway.youku.com^
